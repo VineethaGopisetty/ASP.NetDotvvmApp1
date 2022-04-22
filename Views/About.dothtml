@@ -1,0 +1,8 @@
+﻿@viewModel DotvvmApp1.ViewModels.AboutViewModel, DotvvmApp1
+@masterPage Views/Site.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+    <h1>Namaste </h1>
+
+</dot:Content>
+

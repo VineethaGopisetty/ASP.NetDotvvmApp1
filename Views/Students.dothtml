@@ -1,0 +1,33 @@
+﻿@viewModel DotvvmApp1.ViewModels.StudentsViewModel, DotvvmApp1
+@masterPage Views/Site.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <form id="form1" runat="server" style="text-align: center">
+
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        &nbsp;Below is the sample webform of retriving data from database.<br />
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <h1>Dotvvm page</h1>
+
+        <dot:GridView DataSource="{value:_Students}"
+                      SelectMethod="studentsGrid_GetData"
+                      UpdateMethod="studentsGrid_UpdateItem"
+                      AutoGenerateColumns="False" Height="226px" OnSelectedIndexChanged="studentsGrid_SelectedIndexChanged" Width="685px" HorizontalAlign="Center" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black" GridLines="None">
+            <Columns>
+                <dot:GridViewTextColumn ValueBinding="{value: StudentID}" HeaderText="ID" />
+                <dot:GridViewTextColumn ValueBinding="{value: LastName}" HeaderText="Name" />
+                <dot:GridViewTextColumn ValueBinding="{value: FirstName}" HeaderText="ID" />
+                <dot:GridViewTextColumn ValueBinding="{value: Year}" HeaderText="Name" />
+                <!--<dot:GridViewTemplateColumn HeaderText="Total Credits">
+                    <ItemTemplate>-->
+                <%-- <dot:HtmlLiteral value Text="<%# Item.Enrollments.Sum(en => en.Course.Credits) %>" />--%>
+                <!--</ItemTemplate>
+                </dot:GridViewTemplateColumn>-->
+
+            </Columns>
+        </dot:GridView>
+    </form>
+</dot:Content>

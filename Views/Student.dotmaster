@@ -1,0 +1,8 @@
+﻿@viewModel DotvvmApp1.ViewModels.StudentViewModel, DotvvmApp1
+@masterPage Views/Site.dotmaster
+
+<dot:Content ContentPlaceHolderID="MainContent">
+
+    <h1>This is Student master page</h1>
+</dot:Content>
+
